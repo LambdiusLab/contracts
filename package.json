@@ -1,0 +1,25 @@
+{
+  "name": "@liam/contracts",
+  "description": "Shared contracts for LIAM services",
+  "author": "Daniil Egorov (https://github.com/Lambdius)",
+  "license": "UNLICENSED",
+  "version": "1.0.0",
+  "types": "dist/index.d.ts",
+  "main": "dist/index.js",
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsc",
+    "prepare": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LambdiusLab/contracts.git"
+  },
+  "bugs": {
+    "url": "https://github.com/LambdiusLab/contracts/issues"
+  },
+  "homepage": "https://github.com/LambdiusLab/contracts#readme",
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
