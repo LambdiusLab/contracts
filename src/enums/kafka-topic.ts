@@ -1,8 +1,6 @@
 export enum KafkaTopic {
     ACCESS_CACHE_INVALIDATION_DLQ = "access-cache-invalidation-dlq",
     ACCESS_CACHE_INVALIDATION     = "access-cache-invalidation",
-    ACCESS_CACHE_SNAPSHOT_DLQ     = "access-cache-snapshot-dlq",
-    ACCESS_CACHE_SNAPSHOT         = "access-cache-snapshot",
     PROJECTION_JOURNAL_DLQ        = "projection-journal-dlq",
     PROJECTION_JOURNAL            = "projection-journal",
     NOTIFICATION_DLQ              = "notification-dlq",
