@@ -8,10 +8,10 @@ service AccessControlService {
 }
 
 message ListEffectivePrivilegesRequest {
-    string account_id = 1;
-    string realm_id = 2;
+    string account = 1;
+    string realm = 2;
 }
 
 message ListEffectivePrivilegesResponse {
-    repeated string privilege_ids = 1;
+    repeated string privileges = 1;
 }

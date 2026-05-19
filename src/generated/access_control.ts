@@ -9,12 +9,12 @@
 export const protobufPackage = "access_control";
 
 export interface ListEffectivePrivilegesRequest {
-  accountId: string;
-  realmId: string;
+  account: string;
+  realm: string;
 }
 
 export interface ListEffectivePrivilegesResponse {
-  privilegeIds: string[];
+  privileges: string[];
 }
 
 export interface AccessControlService {
