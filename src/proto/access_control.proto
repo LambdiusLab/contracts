@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package access_control;
+
+service AccessControlService {
+    rpc ListEffectivePrivileges(ListEffectivePrivilegesRequest)
+        returns (ListEffectivePrivilegesResponse);
+}
+
+message ListEffectivePrivilegesRequest {
+    string account_id = 1;
+    string realm_id = 2;
+}
+
+message ListEffectivePrivilegesResponse {
+    repeated string privilege_ids = 1;
+}

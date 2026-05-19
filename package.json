@@ -6,9 +6,12 @@
   "version": "1.0.1",
   "types": "dist/index.d.ts",
   "main": "dist/index.js",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "build": "tsc",
+    "proto:generate": "mkdir -p src/generated && grpc_tools_node_protoc --plugin=protoc-gen-ts_proto=./node_modules/.bin/protoc-gen-ts_proto --ts_proto_out=src/generated --ts_proto_opt=esModuleInterop=true,forceLong=string,useOptionals=messages,outputEncodeMethods=false,outputJsonMethods=false,outputClientImpl=false -I src/proto src/proto/access_control.proto",
+    "build": "npm run proto:generate && tsc && mkdir -p dist/proto && cp src/proto/*.proto dist/proto/",
     "prepare": "npm run build"
   },
   "repository": {
@@ -20,6 +23,9 @@
   },
   "homepage": "https://github.com/LambdiusLab/contracts#readme",
   "devDependencies": {
+    "@types/node": "^25.9.0",
+    "grpc-tools": "^1.13.1",
+    "ts-proto": "^2.11.8",
     "typescript": "^5.0.0"
   }
 }
