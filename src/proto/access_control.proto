@@ -13,5 +13,5 @@ message ListEffectivePrivilegesRequest {
 }
 
 message ListEffectivePrivilegesResponse {
-    repeated string privileges = 1;
+  map<string, string> privileges = 1;
 }
