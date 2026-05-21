@@ -14,7 +14,12 @@ export interface ListEffectivePrivilegesRequest {
 }
 
 export interface ListEffectivePrivilegesResponse {
-  privileges: string[];
+  privileges: { [key: string]: string };
+}
+
+export interface ListEffectivePrivilegesResponse_PrivilegesEntry {
+  key: string;
+  value: string;
 }
 
 export interface AccessControlService {
