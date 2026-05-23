@@ -108,19 +108,16 @@ export enum PermissionCode {
     // Identity
     // ---------------------------------------------------------------------------
     ACCOUNT_READ_PERSONAL = "account.read_personal",
+    ACCOUNT_READ_COMMON   = "account.read_common",
     ACCOUNT_READ_ABSOLUTE = "account.read_absolute",
     ACCOUNT_SUSPEND       = "account.suspend",
     ACCOUNT_RESTORE       = "account.restore",
-
-    IDENTITY_AUDIT_LOG_READ_ABSOLUTE  = "identity_audit_log.read_absolute",
-    IDENTITY_CHANGE_LOG_READ_ABSOLUTE = "identity_change_log.read_absolute",
 
     ELEVATED_ACCESS_CONFIRM_PASSWORD      = "elevated_access.confirm_password",
     ELEVATED_ACCESS_CONFIRM_SECOND_FACTOR = "elevated_access.confirm_second_factor",
 
     IDENTIFIER_READ_PERSONAL         = "identifier.read_personal",
     IDENTIFIER_READ_ABSOLUTE         = "identifier.read_absolute",
-    IDENTIFIER_READ_LOOKUP           = "identifier.read_lookup",
     IDENTIFIER_CREATE                = "identifier.create",
     IDENTIFIER_RESEND                = "identifier.resend",
     IDENTIFIER_VERIFY                = "identifier.verify",
@@ -136,14 +133,15 @@ export enum PermissionCode {
     RECOVERY_CODE_REGENERATE  = "recovery_code.regenerate",
 
     SECOND_FACTOR_READ_PERSONAL = "second_factor.read_personal",
+    SECOND_FACTOR_READ_ABSOLUTE = "second_factor.read_absolute",
     SECOND_FACTOR_CREATE        = "second_factor.create",
     SECOND_FACTOR_VERIFY        = "second_factor.verify",
     SECOND_FACTOR_PURGE         = "second_factor.purge",
 
-    SESSION_READ_CURRENT = "session.read_current",
-    SESSION_READ_LIST    = "session.read_list",
-    SESSION_LOGOUT       = "session.logout",
-    SESSION_REVOKE       = "session.revoke",
-    SESSION_REVOKE_ALL   = "session.revoke_all",
+    SESSION_READ_PERSONAL = "session.read_personal",
+    SESSION_READ_ABSOLUTE = "session.read_absolute",
+    SESSION_LOGOUT        = "session.logout",
+    SESSION_REVOKE        = "session.revoke",
+    SESSION_REVOKE_ALL    = "session.revoke_all",
     /* eslint-enable prettier/prettier */
 }
