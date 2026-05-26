@@ -35,6 +35,13 @@ export enum MessageTemplate {
 export enum PermissionCode {
     /* eslint-disable prettier/prettier */
     // ---------------------------------------------------------------------------
+    // Common
+    // ---------------------------------------------------------------------------
+
+    AUDIT_LOG_READ_ABSOLUTE  = "audit_log.read_absolute",
+    CHANGE_LOG_READ_ABSOLUTE = "change_log.read_absolute",
+
+    // ---------------------------------------------------------------------------
     // AccessControl
     // ---------------------------------------------------------------------------
     REALM_READ_PERSONAL = "realm.read_personal",
@@ -102,11 +109,15 @@ export enum PermissionCode {
     ROLE_CONFLICT_MEMBER_CREATE        = "role_conflict_member.create",
     ROLE_CONFLICT_MEMBER_PURGE         = "role_conflict_member.purge",
 
-    AUDIT_LOG_READ_ABSOLUTE  = "audit_log.read_absolute",
-    CHANGE_LOG_READ_ABSOLUTE = "change_log.read_absolute",
+    INVITE_READ_PERSONAL = "INVITE_READ_PERSONAL",
+    INVITE_READ_ABSOLUTE = "INVITE_READ_ABSOLUTE",
+    INVITE_CHANGE_STATUS = "INVITE_CHANGE_STATUS",
+    INVITE_CREATE = "INVITE_CREATE",
+
     // ---------------------------------------------------------------------------
     // Identity
     // ---------------------------------------------------------------------------
+
     ACCOUNT_READ_PERSONAL = "account.read_personal",
     ACCOUNT_READ_COMMON   = "account.read_common",
     ACCOUNT_READ_ABSOLUTE = "account.read_absolute",
