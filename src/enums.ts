@@ -51,6 +51,7 @@ export enum PermissionCode {
     REALM_REVOKE        = "realm.revoke",
     REALM_RESTORE       = "realm.restore",
     REALM_PURGE         = "realm.purge",
+    REALM_EXCLUDE       = "realm.exclude",
 
     ROLE_READ_COMMON      = "role.read_common",
     ROLE_READ_PERSONAL    = "role.read_personal",
@@ -112,7 +113,7 @@ export enum PermissionCode {
     INVITE_READ_PERSONAL = "INVITE_READ_PERSONAL",
     INVITE_READ_ABSOLUTE = "INVITE_READ_ABSOLUTE",
     INVITE_CHANGE_STATUS = "INVITE_CHANGE_STATUS",
-    INVITE_CREATE = "INVITE_CREATE",
+    INVITE_CREATE        = "INVITE_CREATE",
 
     // ---------------------------------------------------------------------------
     // Identity
