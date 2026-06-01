@@ -34,6 +34,11 @@ export enum KafkaTopic {
     ACCESS_CACHE_INVALIDATION_RETRY = "access-cache-invalidation-retry",
     ACCESS_CACHE_INVALIDATION_DEAD  = "access-cache-invalidation-dead",
 
+    // elevated-access: identity -> all services
+    ELEVATED_ACCESS       = "elevated-access",
+    ELEVATED_ACCESS_RETRY = "elevated-access-retry",
+    ELEVATED_ACCESS_DEAD  = "elevated-access-dead",
+
     // blacklist: session revocation — no retry, dead for failure analysis only
     BLACKLIST      = "blacklist",
     BLACKLIST_DEAD = "blacklist-dead",
