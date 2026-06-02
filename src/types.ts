@@ -1,4 +1,4 @@
-import { InvalidationScope } from "./enums";
+import { AccountOperation, InvalidationScope, MembershipOperation } from "./enums";
 
 declare global {
     namespace Events {
@@ -27,6 +27,59 @@ declare global {
 
             type GlobalItem = {
                 scope: InvalidationScope.GLOBAL;
+            };
+        }
+
+        namespace Membership {
+            type Event = {
+                operation: MembershipOperation;
+                account: string;
+                realm: string;
+            };
+        }
+
+        namespace Account {
+            type Register = {
+                account: string;
+            };
+
+            type Purge = {
+                account: string;
+            };
+
+            type Event = {
+                eventType: AccountOperation;
+                payload: Register | Purge;
+            };
+        }
+
+        namespace Blacklist {
+            type Event = {
+                eventType: "SESSION_REVOKED";
+                payload: {
+                    expiresAt: number;
+                    session: string;
+                };
+            };
+        }
+
+        namespace ElevatedAccess {
+            type Event = {
+                eventType: "ELEVATED_ACCESS_GRANTED";
+                payload: {
+                    expiresAt: number;
+                    session: string;
+                };
+            };
+        }
+    }
+
+    namespace Consumers {
+        namespace DLQ {
+            type Message = {
+                originalTopic: string;
+                payload: unknown;
+                error: string;
             };
         }
     }

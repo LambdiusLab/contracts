@@ -7,6 +7,20 @@ export enum InvalidationScope {
     /* eslint-enable prettier/prettier */
 }
 
+export enum MembershipOperation {
+    /* eslint-disable prettier/prettier */
+    REVOKE = "REVOKE",
+    GRANT  = "GRANT",
+    /* eslint-enable prettier/prettier */
+}
+
+export enum AccountOperation {
+    /* eslint-disable prettier/prettier */
+    REGISTER = "REGISTER",
+    PURGE    = "PURGE",
+    /* eslint-enable prettier/prettier */
+}
+
 export enum KafkaTopic {
     /* eslint-disable prettier/prettier */
     // account: identity -> all services
