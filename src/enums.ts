@@ -14,6 +14,11 @@ export enum KafkaTopic {
     ACCOUNT_RETRY = "account-retry",
     ACCOUNT_DEAD  = "account-dead",
 
+    // membership: access-control -> identity
+    MEMBERSHIP       = "membership",
+    MEMBERSHIP_RETRY = "membership-retry",
+    MEMBERSHIP_DEAD  = "membership-dead",
+
     // identifier: identity -> notification
     IDENTIFIER       = "identifier",
     IDENTIFIER_RETRY = "identifier-retry",
