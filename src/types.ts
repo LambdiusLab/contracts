@@ -1,11 +1,21 @@
-import { AccountOperation, InvalidationScope, MembershipOperation } from "./enums";
+import {
+    ElevatedAccessTopicAction, 
+    AccessCacheTopicAction,
+    MembershipTopicAction,
+    BlacklistTopicAction,
+    AccountTopicAction,
+    InvalidationScope
+} from "./enums";
 
 declare global {
-    namespace Events {
+    namespace Topics {
         namespace AccessCache {
-            type Invalidation = {
-                items: Item[];
-            };
+            type Message = {
+                actionType: AccessCacheTopicAction,
+                payload: {
+                    items: Item[];
+                }
+            }
 
             type Item = AccountRealmItem | RealmItem | AccountItem | GlobalItem;
 
@@ -31,31 +41,27 @@ declare global {
         }
 
         namespace Membership {
-            type Event = {
-                operation: MembershipOperation;
-                account: string;
-                realm: string;
+            type Message = {
+                actionType: MembershipTopicAction;
+                payload: {
+                    account: string;
+                    realm: string;
+                }
             };
         }
 
         namespace Account {
-            type Register = {
-                account: string;
-            };
-
-            type Purge = {
-                account: string;
-            };
-
-            type Event = {
-                eventType: AccountOperation;
-                payload: Register | Purge;
+            type Message = {
+                actionType: AccountTopicAction;
+                payload: {
+                    account: string;
+                }
             };
         }
 
         namespace Blacklist {
-            type Event = {
-                eventType: "SESSION_REVOKED";
+            type Message = {
+                actionType: BlacklistTopicAction;
                 payload: {
                     expiresAt: number;
                     session: string;
@@ -64,8 +70,8 @@ declare global {
         }
 
         namespace ElevatedAccess {
-            type Event = {
-                eventType: "ELEVATED_ACCESS_GRANTED";
+            type Message = {
+                actionType: ElevatedAccessTopicAction;
                 payload: {
                     expiresAt: number;
                     session: string;

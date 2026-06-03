@@ -1,26 +1,3 @@
-export enum InvalidationScope {
-    /* eslint-disable prettier/prettier */
-    ACCOUNT_REALM = "ACCOUNT_REALM",
-    ACCOUNT       = "ACCOUNT",
-    GLOBAL        = "GLOBAL",
-    REALM         = "REALM",
-    /* eslint-enable prettier/prettier */
-}
-
-export enum MembershipOperation {
-    /* eslint-disable prettier/prettier */
-    REVOKE = "REVOKE",
-    GRANT  = "GRANT",
-    /* eslint-enable prettier/prettier */
-}
-
-export enum AccountOperation {
-    /* eslint-disable prettier/prettier */
-    REGISTER = "REGISTER",
-    PURGE    = "PURGE",
-    /* eslint-enable prettier/prettier */
-}
-
 export enum KafkaTopic {
     /* eslint-disable prettier/prettier */
     // account: identity -> all services
@@ -38,6 +15,11 @@ export enum KafkaTopic {
     IDENTIFIER_RETRY = "identifier-retry",
     IDENTIFIER_DEAD  = "identifier-dead",
 
+    // access-cache: access-control -> all services
+    ACCESS_CACHE       = "access-cache",
+    ACCESS_CACHE_RETRY = "access-cache-retry",
+    ACCESS_CACHE_DEAD  = "access-cache-dead",
+
     // notification: all services -> notification
     NOTIFICATION       = "notification",
     NOTIFICATION_RETRY = "notification-retry",
@@ -47,11 +29,6 @@ export enum KafkaTopic {
     PROJECTION_JOURNAL       = "projection-journal",
     PROJECTION_JOURNAL_RETRY = "projection-journal-retry",
     PROJECTION_JOURNAL_DEAD  = "projection-journal-dead",
-
-    // access-cache-invalidation: access-control -> all services
-    ACCESS_CACHE_INVALIDATION       = "access-cache-invalidation",
-    ACCESS_CACHE_INVALIDATION_RETRY = "access-cache-invalidation-retry",
-    ACCESS_CACHE_INVALIDATION_DEAD  = "access-cache-invalidation-dead",
 
     // elevated-access: identity -> all services
     ELEVATED_ACCESS       = "elevated-access",
@@ -64,6 +41,44 @@ export enum KafkaTopic {
     /* eslint-enable prettier/prettier */
 }
 
+export enum AccountTopicAction {
+    /* eslint-disable prettier/prettier */
+    CREATE = "CREATE",
+    PURGE  = "PURGE",
+    /* eslint-enable prettier/prettier */
+}
+
+export enum MembershipTopicAction {
+    /* eslint-disable prettier/prettier */
+    REVOKE = "REVOKE",
+    GRANT  = "GRANT",
+    /* eslint-enable prettier/prettier */
+}
+
+export enum IdentifierTopicAction {
+    /* eslint-disable prettier/prettier */
+    CREATE = "CREATE",
+    PURGE  = "PURGE",
+    /* eslint-enable prettier/prettier */
+}
+
+export enum AccessCacheTopicAction {
+    INVALIDATE = "INVALIDATE",
+}
+
+export enum InvalidationScope {
+    /* eslint-disable prettier/prettier */
+    ACCOUNT_REALM = "ACCOUNT_REALM",
+    ACCOUNT       = "ACCOUNT",
+    GLOBAL        = "GLOBAL",
+    REALM         = "REALM",
+    /* eslint-enable prettier/prettier */
+}
+
+export enum NotificationTopicAction {
+    CREATE = "CREATE",
+}
+
 export enum MessageTemplate {
     /* eslint-disable prettier/prettier */
     IDENTIFIER_VERIFICATION_OTP = "IDENTIFIER_VERIFICATION_OTP",
@@ -71,6 +86,14 @@ export enum MessageTemplate {
     RESET_PASSWORD_OTP          = "RESET_PASSWORD_OTP",
     LOGIN_OTP                   = "LOGIN_OTP"
     /* eslint-enable prettier/prettier */
+}
+
+export enum ElevatedAccessTopicAction {
+    GRANT = "GRANT"
+}
+
+export enum BlacklistTopicAction {
+    ADD = "ADD",
 }
 
 export enum PermissionCode {
