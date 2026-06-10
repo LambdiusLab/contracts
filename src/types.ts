@@ -1,5 +1,5 @@
 import {
-    ElevatedAccessTopicAction, 
+    ReauthenticationTopicAction,
     AccessCacheTopicAction,
     MembershipTopicAction,
     BlacklistTopicAction,
@@ -81,9 +81,9 @@ declare global {
             };
         }
 
-        namespace ElevatedAccess {
+        namespace Reauthentication {
             type Message = {
-                actionType: ElevatedAccessTopicAction;
+                actionType: ReauthenticationTopicAction;
                 payload: {
                     expiresAt: number;
                     session: string;

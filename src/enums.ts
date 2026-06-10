@@ -30,10 +30,10 @@ export enum KafkaTopic {
     PROJECTION_JOURNAL_RETRY = "projection-journal-retry",
     PROJECTION_JOURNAL_DEAD  = "projection-journal-dead",
 
-    // elevated-access: identity -> all services
-    ELEVATED_ACCESS       = "elevated-access",
-    ELEVATED_ACCESS_RETRY = "elevated-access-retry",
-    ELEVATED_ACCESS_DEAD  = "elevated-access-dead",
+    // reauthentication: identity -> all services
+    REAUTHENTICATION       = "reauthentication",
+    REAUTHENTICATION_RETRY = "reauthentication-retry",
+    REAUTHENTICATION_DEAD  = "reauthentication-dead",
 
     // blacklist: session revocation — no retry, dead for failure analysis only
     BLACKLIST      = "blacklist",
@@ -88,7 +88,7 @@ export enum MessageTemplate {
     /* eslint-enable prettier/prettier */
 }
 
-export enum ElevatedAccessTopicAction {
+export enum ReauthenticationTopicAction {
     GRANT = "GRANT"
 }
 
@@ -189,8 +189,8 @@ export enum PermissionCode {
     ACCOUNT_SUSPEND       = "account.suspend",
     ACCOUNT_RESTORE       = "account.restore",
 
-    ELEVATED_ACCESS_CONFIRM_PASSWORD      = "elevated_access.confirm_password",
-    ELEVATED_ACCESS_CONFIRM_SECOND_FACTOR = "elevated_access.confirm_second_factor",
+    REAUTHENTICATION_CONFIRM_PASSWORD      = "reauthentication.confirm_password",
+    REAUTHENTICATION_CONFIRM_SECOND_FACTOR = "reauthentication.confirm_second_factor",
 
     IDENTIFIER_READ_PERSONAL         = "identifier.read_personal",
     IDENTIFIER_READ_ABSOLUTE         = "identifier.read_absolute",
