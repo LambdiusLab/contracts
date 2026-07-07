@@ -235,11 +235,26 @@ export enum PermissionCode {
     SESSION_REVOKE        = "session.revoke",
     SESSION_REVOKE_ALL    = "session.revoke_all",
 
-    OAUTH_CLIENT_READ_ABSOLUTE = "oauth_client.read_absolute",
-    OAUTH_CLIENT_CREATE        = "oauth_client.create",
-    OAUTH_CLIENT_UPDATE        = "oauth_client.update",
-    OAUTH_CLIENT_REVOKE        = "oauth_client.revoke",
-    OAUTH_CLIENT_RESTORE       = "oauth_client.restore",
-    OAUTH_CLIENT_PURGE         = "oauth_client.purge",
+    APPLICATION_READ_ABSOLUTE = "application.read_absolute",
+    APPLICATION_CREATE = "application.create",
+    APPLICATION_UPDATE = "application.update",
+    APPLICATION_REVOKE = "application.revoke",
+    APPLICATION_RESTORE = "application.restore",
+    APPLICATION_PURGE = "application.purge",
+
+    INTERFACE_CLIENT_READ_ABSOLUTE = "interface_client.read_absolute",
+    INTERFACE_CLIENT_CREATE = "interface_client.create",
+    INTERFACE_CLIENT_UPDATE = "interface_client.update",
+    INTERFACE_CLIENT_REVOKE = "interface_client.revoke",
+    INTERFACE_CLIENT_RESTORE = "interface_client.restore",
+    INTERFACE_CLIENT_PURGE = "interface_client.purge",
+
+    SERVICE_CLIENT_REGENERATE_SECRET = "service_client.regenerate_secret",
+    SERVICE_CLIENT_READ_ABSOLUTE = "service_client.read_absolute",
+    SERVICE_CLIENT_CREATE = "service_client.create",
+    SERVICE_CLIENT_UPDATE = "service_client.update",
+    SERVICE_CLIENT_REVOKE = "service_client.revoke",
+    SERVICE_CLIENT_RESTORE = "service_client.restore",
+    SERVICE_CLIENT_PURGE = "service_client.purge",
     /* eslint-enable prettier/prettier */
 }
