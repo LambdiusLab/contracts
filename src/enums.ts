@@ -43,6 +43,10 @@ export enum KafkaTopic {
     // blacklist: session revocation — no retry, dead for failure analysis only
     BLACKLIST      = "blacklist",
     BLACKLIST_DEAD = "blacklist-dead",
+
+    // audit-log-archive / change-log-archive: all services -> ClickHouse, no retry/dead
+    AUDIT_LOG_ARCHIVE  = "audit-log-archive",
+    CHANGE_LOG_ARCHIVE = "change-log-archive",
     /* eslint-enable prettier/prettier */
 }
 
@@ -107,6 +111,14 @@ export enum ReauthenticationTopicAction {
 
 export enum BlacklistTopicAction {
     ADD = "ADD",
+}
+
+export enum AuditLogTopicAction {
+    ARCHIVE = "ARCHIVE",
+}
+
+export enum ChangeLogTopicAction {
+    ARCHIVE = "ARCHIVE",
 }
 
 export enum PermissionCode {
