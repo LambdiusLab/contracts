@@ -29,7 +29,8 @@ git add .
 git commit -m "feat: add new message templates"
 ```
 3. Create tag and push:
-```bash
+```sh
+npm version # one of patch / minor / major
 git tag v1.1.0
 git push origin main --tags
 ```

@@ -2,10 +2,10 @@ import {
     ReauthenticationTopicAction,
     AccessCacheTopicAction,
     MembershipTopicAction,
-    RealmTopicAction,
     BlacklistTopicAction,
     AccountTopicAction,
     InvalidationScope,
+    RealmTopicAction,
 } from "./enums";
 
 declare global {
