@@ -20,6 +20,16 @@ export enum KafkaTopic {
     IDENTIFIER_RETRY = "identifier-retry",
     IDENTIFIER_DEAD  = "identifier-dead",
 
+    // service-client: identity -> certificate-service
+    SERVICE_CLIENT       = "service-client",
+    SERVICE_CLIENT_RETRY = "service-client-retry",
+    SERVICE_CLIENT_DEAD  = "service-client-dead",
+
+    // interface-client: identity -> all services
+    INTERFACE_CLIENT       = "interface-client",
+    INTERFACE_CLIENT_RETRY = "interface-client-retry",
+    INTERFACE_CLIENT_DEAD  = "interface-client-dead",
+
     // access-cache: access-control -> all services
     ACCESS_CACHE       = "access-cache",
     ACCESS_CACHE_RETRY = "access-cache-retry",
@@ -66,6 +76,24 @@ export enum MembershipTopicAction {
 
 export enum RealmTopicAction {
     /* eslint-disable prettier/prettier */
+    REVOKE  = "REVOKE",
+    RESTORE = "RESTORE",
+    PURGE   = "PURGE",
+    /* eslint-enable prettier/prettier */
+}
+
+export enum ServiceClientTopicAction {
+    /* eslint-disable prettier/prettier */
+    CREATE  = "CREATE",
+    REVOKE  = "REVOKE",
+    RESTORE = "RESTORE",
+    PURGE   = "PURGE",
+    /* eslint-enable prettier/prettier */
+}
+
+export enum InterfaceClientTopicAction {
+    /* eslint-disable prettier/prettier */
+    CREATE  = "CREATE",
     REVOKE  = "REVOKE",
     RESTORE = "RESTORE",
     PURGE   = "PURGE",
@@ -270,12 +298,11 @@ export enum PermissionCode {
     INTERFACE_CLIENT_RESTORE       = "interface_client.restore",
     INTERFACE_CLIENT_PURGE         = "interface_client.purge",
 
-    SERVICE_CLIENT_REGENERATE_SECRET = "service_client.regenerate_secret",
-    SERVICE_CLIENT_READ_ABSOLUTE     = "service_client.read_absolute",
-    SERVICE_CLIENT_CREATE            = "service_client.create",
-    SERVICE_CLIENT_UPDATE            = "service_client.update",
-    SERVICE_CLIENT_REVOKE            = "service_client.revoke",
-    SERVICE_CLIENT_RESTORE           = "service_client.restore",
-    SERVICE_CLIENT_PURGE             = "service_client.purge",
+    SERVICE_CLIENT_READ_ABSOLUTE = "service_client.read_absolute",
+    SERVICE_CLIENT_CREATE        = "service_client.create",
+    SERVICE_CLIENT_UPDATE        = "service_client.update",
+    SERVICE_CLIENT_REVOKE        = "service_client.revoke",
+    SERVICE_CLIENT_RESTORE       = "service_client.restore",
+    SERVICE_CLIENT_PURGE         = "service_client.purge",
     /* eslint-enable prettier/prettier */
 }
