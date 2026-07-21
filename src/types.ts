@@ -1,5 +1,6 @@
 import {
     ReauthenticationTopicAction,
+    ServiceClientTopicAction,
     AccessCacheTopicAction,
     MembershipTopicAction,
     BlacklistTopicAction,
@@ -98,6 +99,17 @@ declare global {
                 payload: {
                     expiresAt: number;
                     session: string;
+                };
+            };
+        }
+
+        namespace ServiceClient {
+            type Message = {
+                actionType: ServiceClientTopicAction;
+                payload: {
+                    application: string;
+                    code: string;
+                    id: string;
                 };
             };
         }
