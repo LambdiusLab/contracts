@@ -304,5 +304,13 @@ export enum PermissionCode {
     SERVICE_CLIENT_REVOKE        = "service_client.revoke",
     SERVICE_CLIENT_RESTORE       = "service_client.restore",
     SERVICE_CLIENT_PURGE         = "service_client.purge",
+
+    // ---------------------------------------------------------------------------
+    // Certificate
+    // ---------------------------------------------------------------------------
+
+    CERTIFICATE_READ_PERSONAL = "certificate.read_personal",
+    CERTIFICATE_READ_ABSOLUTE = "certificate.read_absolute",
+    CERTIFICATE_REVOKE        = "certificate.revoke",
     /* eslint-enable prettier/prettier */
 }
